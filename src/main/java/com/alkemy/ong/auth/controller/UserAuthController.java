@@ -1,11 +1,10 @@
 package com.alkemy.ong.auth.controller;
 
 import com.alkemy.ong.auth.dto.*;
-import com.alkemy.ong.dto.UserBasicDto;
 import com.alkemy.ong.auth.service.CustomUserDetailsService;
-import com.alkemy.ong.auth.service.JwtAuthResponseDto;
 import com.alkemy.ong.auth.service.IUserService;
 import com.alkemy.ong.auth.service.JwtUtils;
+import com.alkemy.ong.dto.UserBasicDto;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,10 +1,9 @@
 package com.alkemy.ong.auth.dto;
 
-import com.alkemy.ong.model.Role;
-import lombok.*;
-import org.aspectj.lang.annotation.Before;
-
-import java.time.LocalDate;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
@@ -12,10 +11,7 @@ import javax.validation.constraints.NotNull;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 public class UserDto {
-
-    private Long id;
 
     @NotNull(message="First name can't be null")
     private String firstName;
@@ -33,15 +29,10 @@ public class UserDto {
     @NotNull
     private String photo;
 
-
-    private Role role;
-
-    private LocalDate updated;
-
-    private LocalDate created;
+    private String role;
 
     @Builder
-    public UserDto(String firstName, String lastName, String email, String password, String photo, Role role) {
+    public UserDto(String firstName, String lastName, String email, String password, String photo, String role) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

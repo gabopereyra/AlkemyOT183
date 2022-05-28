@@ -25,31 +25,23 @@ public class UserMapper {
     public UserModel userDTO2Entity(UserDto dto){
 
         UserModel entity = new UserModel();
-
-        entity.setId(dto.getId());
         entity.setFirstName(dto.getFirstName());
         entity.setLastName(dto.getLastName());
         entity.setPassword(dto.getPassword());
         entity.setEmail(dto.getEmail());
         entity.setPhoto(dto.getPhoto());
-        entity.setCreated(dto.getCreated());
-        entity.setUpdated(dto.getUpdated());
-        
         return entity;
     }
 
     public UserDto userEntity2DTO(UserModel entity){
         UserDto dto = new UserDto();
 
-        dto.setId(entity.getId());
         dto.setFirstName(entity.getFirstName());
         dto.setLastName(entity.getLastName());
         dto.setPassword(entity.getPassword());
         dto.setEmail(entity.getEmail());
         dto.setPhoto(entity.getPhoto());
-        dto.setCreated(entity.getCreated());
-        dto.setUpdated(entity.getUpdated());
-        dto.setRole(entity.getRole());
+        dto.setRole(entity.getRole().getName());
 
         return dto;
     }
@@ -62,8 +54,6 @@ public class UserMapper {
                 dtoList.add(userEntity2DTO(entity))
         );
 
-
-
         return dtoList;
     }
 
@@ -75,7 +65,6 @@ public class UserMapper {
         userBasicDto.setId(entity.getId());
 
         return userBasicDto;
-
     }
 
     public UserProfileDto userModel2UserProfileDto(UserModel userModel) {
@@ -86,13 +75,11 @@ public class UserMapper {
         userProfileDto.setLastName(userModel.getLastName());
         userProfileDto.setPhoto(userModel.getPhoto());
         return userProfileDto;
-
     }
 
     public UserPatchDto userModel2UserPatchDto(UserModel userModel){
         return new UserPatchDto(userModel.getFirstName(), userModel.getLastName(), userModel.getPhoto());
     }
-
 }
 
 

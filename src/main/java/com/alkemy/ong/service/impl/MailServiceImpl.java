@@ -5,7 +5,7 @@ import java.util.Locale;
 
 import com.alkemy.ong.exception.EmailException;
 import com.alkemy.ong.exception.EmailSenderException;
-import com.alkemy.ong.odt.MailFormat;
+import com.alkemy.ong.dto.MailFormat;
 import com.alkemy.ong.service.IMailService;
 import com.sendgrid.Method;
 import com.sendgrid.Request;

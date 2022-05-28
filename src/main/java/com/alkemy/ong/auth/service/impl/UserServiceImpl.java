@@ -77,8 +77,10 @@ public class UserServiceImpl implements IUserService {
         }
         userDto.setPassword(passwordEncoder.encode(userDto.getPassword()));
         UserModel entity = userMapper.userDTO2Entity(userDto);
-        entity.setRole(roleRepository.findByName("USER").get());
+
+        entity.setRole(roleRepository.findByName(userDto.getRole()).get());
         entity = userRepository.save(entity);
+
         if (entity != null) {
             mailService.sendEmailByRegistration(entity.getEmail(), entity.getFirstName());
         } else {

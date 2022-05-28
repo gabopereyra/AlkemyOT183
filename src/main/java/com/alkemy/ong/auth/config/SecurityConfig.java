@@ -31,15 +31,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
+    private static final String[] swaggerWhitelist = {
+            "/configuration/ui",
+            "/swagger-resources/**",
+            "/swagger-ui.html",
+            "/webjars/**",
+            "/swagger-resources/configuration/ui",
+            "/swagger-ui.html",
+            "/swagger-ui/**",
+            "/api/docs",
+            "/v2/api-docs"
+    };
+
     @Override
-    public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/v2/api-docs",
-                "/configuration/ui",
-                "/swagger-resources/**",
-                "/configuration/security",
-                "/swagger-ui/**",
-                "/swagger-ui",
-                "/webjars/**");
+    public void configure(WebSecurity webSecurity){
+        webSecurity.ignoring().antMatchers(swaggerWhitelist);
     }
 
     @Override

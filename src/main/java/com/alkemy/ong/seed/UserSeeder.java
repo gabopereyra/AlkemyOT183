@@ -23,49 +23,21 @@ public class UserSeeder implements CommandLineRunner {
     private final MessageSource messageSource;
 
     private final String[] names = {
-            "Adriana",
-            "Alejandro",
-            "Alexander",
-            "Andrea",
-            "Andres",
-            "Angela",
-            "Angelica",
-            "Angie",
-            "Camilo",
-            "Carlos",
-            "Carol",
-            "Carolina",
-            "Catherine",
-            "Cinthya",
-            "Claudia",
-            "Cristina",
-            "Daniel",
-            "Daniela",
-            "Diana",
-            "Diego"
+            "adriana",
+            "andrea",
+            "andres",
+            "daniel",
+            "diana",
+            "diego"
     };
 
     private final String[] lastnames = {
-            "Hernandez",
-            "Sanchez",
-            "Acevedo",
-            "Vargas",
-            "Acero",
-            "Garcia",
-            "Monroy",
-            "Piñeros",
-            "Blanco",
-            "Fernandez",
-            "Ruiz",
-            "Rodriguez",
-            "Cortes",
-            "Gomez",
-            "Castellanos",
-            "Contreras",
-            "Pinzon",
-            "Alfonso",
-            "Guzman",
-            "Torres"
+            "sanchez",
+            "acevedo",
+            "blanco",
+            "ruiz",
+            "alfonso",
+            "guzman",
     };
 
     private enum RoleType {
@@ -87,7 +59,7 @@ public class UserSeeder implements CommandLineRunner {
 
         Role adminRole = getRole(RoleType.ADMIN.toString());
 
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 6; i++) {
             createUser(
                     getFirstname(i),
                     getLastname(i),
@@ -150,7 +122,7 @@ public class UserSeeder implements CommandLineRunner {
     }
 
     public Role getRoleByIndex(int index, Role userRole, Role adminRole) {
-        if (index < 10) return userRole;
+        if (index < 3) return userRole;
         return adminRole;
     }
 

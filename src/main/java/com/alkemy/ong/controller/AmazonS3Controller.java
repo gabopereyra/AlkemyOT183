@@ -1,9 +1,6 @@
 package com.alkemy.ong.controller;
 
 import com.alkemy.ong.service.AmazonS3Service;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.Hidden;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;

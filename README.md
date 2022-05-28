@@ -3,7 +3,7 @@
 <p>NOTE: the proyect contens seeders to test the endpoints.</p>
 <ul>Will add to the database the followings:
     <li>Activities</li>
-<li>Catergories</li>
+<li>Categories</li>
 <li>Users, in this case, the following table show them with their roles.</li>
 </ul>
 <h3>Users</h3>

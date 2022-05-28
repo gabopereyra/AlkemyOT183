@@ -1,26 +1,12 @@
 # OT183-server
 <hr>
-
-<h3>Roles</h3>
-
-<table>
-<thead>
-<td>ID</td>
-<td>TIPO</td>
-</thead>
-  <tr>
-    <td>1</td>
-    <td>USER</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>ADMIN</td>
-  </tr>
-</table>
-<hr>
-
+<p>NOTE: the proyect contens seeders to test the endpoints.</p>
+<ul>Will add to the database the followings:
+    <li>Activities</li>
+<li>Catergories</li>
+<li>Users, in this case, the following table show them with their roles.</li>
+</ul>
 <h3>Users</h3>
-
 <table >
 <thead>
 <td>ID</td>
@@ -31,121 +17,40 @@
   <tr>
     <td>1</td>
     <td>USER</td>
-    <td>Adriana.Hernandez@gmail.com</td>
+    <td>adriana.sanchez@gmail.com</td>
     <td>123456789</td>
   </tr>
   <tr>
     <td>2</td>
     <td>USER</td>
-    <td>Alejandro.Sanchez@gmail.com</td>
+    <td>andrea.acevedo@gmail.com</td>
     <td>123456789</td>
   </tr>
   <tr>
     <td>3</td>
     <td>USER</td>
-    <td>Alexander.Acevedo@gmail.com</td>
+    <td>andres.blanco@gmail.com</td>
     <td>123456789</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>USER</td>
-    <td>Andrea.Vargas@gmail.com</td>
+    <td>ADMIN</td>
+    <td>daniel.ruiz@gmail.com</td>
     <td>123456789</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>USER</td>
-    <td>Andres.Acero@gmail.com</td>
+    <td>ADMIN</td>
+    <td>diana.alfonso@gmail.com</td>
     <td>123456789</td>
   </tr>
   <tr>
     <td>6</td>
-    <td>USER</td>
-    <td>Angela.Garcia@gmail.com</td>
-    <td>123456789</td>
-  </tr>
-  <tr>
-    <td>7</td>
-    <td>USER</td>
-    <td>Angelica.Monroy@gmail.com</td>
-    <td>123456789</td>
-  </tr>
-  <tr>
-    <td>8</td>
-    <td>USER</td>
-    <td>Angie.Piñeros@gmail.com</td>
-    <td>123456789</td>
-  </tr>
-  <tr>
-    <td>9</td>
-    <td>USER</td>
-    <td>Camilo.Blanco@gmail.com</td>
-    <td>123456789</td>
-  </tr>
-  <tr>
-    <td>10</td>
-    <td>USER</td>
-    <td>Carlos.Fernandez@gmail.com</td>
-    <td>123456789</td>
-  </tr>
-  <tr>
-    <td>11</td>
     <td>ADMIN</td>
-    <td>Carol.Ruiz@gmail.com</td>
-    <td>123456789</td>
-  </tr>
-  <tr>
-    <td>12</td>
-    <td>ADMIN</td>
-    <td>Carolina.Rodriguez@gmail.com</td>
-    <td>123456789</td>
-  </tr>
-  <tr>
-    <td>13</td>
-    <td>ADMIN</td>
-    <td>Catherine.Cortes@gmail.com</td>
-    <td>123456789</td>
-  </tr>
-  <tr>
-    <td>14</td>
-    <td>ADMIN</td>
-    <td>Cinthya.Gomez@gmail.com</td>
-    <td>123456789</td>
-  </tr>
-  <tr>
-    <td>15</td>
-    <td>ADMIN</td>
-    <td>Claudia.Castellanos@gmail.com</td>
-    <td>123456789</td>
-  </tr>
-  <tr>
-    <td>16</td>
-    <td>ADMIN</td>
-    <td>Cristina.Contreras@gmail.com</td>
-    <td>123456789</td>
-  </tr>
-  <tr>
-    <td>17</td>
-    <td>ADMIN</td>
-    <td>Daniel.Pinzon@gmail.com</td>
-    <td>123456789</td>
-  </tr>
-  <tr>
-    <td>18</td>
-    <td>ADMIN</td>
-    <td>Daniela.Alfonso@gmail.com</td>
-    <td>123456789</td>
-  </tr>
-  <tr>
-    <td>19</td>
-    <td>ADMIN</td>
-    <td>Diana.Guzman@gmail.com</td>
-    <td>123456789</td>
-  </tr>
-  <tr>
-    <td>20</td>
-    <td>ADMIN</td>
-    <td>Diego.Torres@gmail.com</td>
+    <td>diego.guzman@gmail.com</td>
     <td>123456789</td>
   </tr>
 </table>
+<hr>
+<p><b>Note:</b> to send emails the app use SendGrid, please, make sure to configure it before run the app.</p>
+<p><b>Note:</b> to manage images the app works with AWS S3, please, make sure to configure it before run the app.</p>

@@ -35,22 +35,15 @@ public class SwaggerConfig {
                 .securityContexts(Arrays.asList(securityContext()))
                 .securitySchemes(Arrays.asList(apiKey()))
                 .select()
-                .apis(Predicates.or(RequestHandlerSelectors.basePackage("com.alkemy.ong.auth.controller")
-                        ,(RequestHandlerSelectors.basePackage("com.alkemy.ong.controller"))))
-                //.paths(postPaths())
-                .paths(PathSelectors.any())
+                .apis(RequestHandlerSelectors.any())
+                .paths(postPaths())
                 .build()
                 .apiInfo(getApiInfo());
-
     }
 
 
-    //When add a route MUST BE with format:
-    // (/route)|(/route/.*)
-
-    //TODO when documentation be implemented, delete this example route
     private Predicate<String> postPaths() {
-        String routes = "(/auth)|(/auth/.*)|(/news)|(/news/.*)|(/categories)|(/categories/.*)|(/testimonials)|(/testimonials/.*)";
+        String routes = "(/auth)|(/auth/.*)|(/organization)|(/organization/.*)|(/slides)|(/slides/.*)|(/users)|(/users/.*)|(/members)|(/members/.*)|(/comments)|(/comments/.*)|(/activities)|(/activities/.*)|(/news)|(/news/.*)|(/categories)|(/categories/.*)|(/testimonials)|(/testimonials/.*)";
         Predicate<String> retorno = a -> a.matches(routes);
         return retorno;
     }
